@@ -1,10 +1,14 @@
 package com.spiderb2.pokemon.pokemon;
 
+import com.spiderb2.pokemon.pokemon.items.Item;
 import com.spiderb2.pokemon.pokemon.moves.Growl;
 import com.spiderb2.pokemon.pokemon.moves.PokemonMove;
 import com.spiderb2.pokemon.pokemon.moves.TailWhip;
 import com.spiderb2.pokemon.pokemon.moves.ThunderWave;
 import com.spiderb2.pokemon.pokemon.moves.Thundershock;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Pikachu implements Pokemon {
 
@@ -14,6 +18,7 @@ public class Pikachu implements Pokemon {
     private int hp;
     private final PokemonType type = PokemonType.ELECTRIC;
     private PokemonMove[] moves;
+    List<Item> bag;
 
     private void reset(){
         this.weight = 16;
@@ -25,6 +30,7 @@ public class Pikachu implements Pokemon {
                 new TailWhip(),
                 new ThunderWave()
         };
+        this.bag = new ArrayList<>();
     }
 
     public Pikachu() {
@@ -66,4 +72,19 @@ public class Pikachu implements Pokemon {
     public PokemonMove[] getMoves() {
         return this.moves;
     }
+
+    public void pika(){
+        System.out.println("PIKA PIKA!");
+    }
+
+    public void addItemToBag(Item item){
+        this.bag.add(item);
+    }
+
+    public static class Tail {
+        public static void wag(){
+            System.out.println("The Pikachu wagged its tail at you.");
+        }
+    }
+
 }
