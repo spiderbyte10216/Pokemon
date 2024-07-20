@@ -1,5 +1,6 @@
 package com.spiderb2.pokemon;
 
+import com.spiderb2.pokemon.pokemon.Charizard;
 import com.spiderb2.pokemon.pokemon.Pikachu;
 import com.spiderb2.pokemon.pokemon.Pokemon;
 import com.spiderb2.pokemon.pokemon.items.CheriBerry;
@@ -21,5 +22,10 @@ public class Main {
         Pikachu.Tail.wag();
 
         pika2.addItemToBag(new CheriBerry());
+
+
+        Pokemon char1 = new Charizard("Char");
+        System.out.println(char1.getName());
+
     }
 }
